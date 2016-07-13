@@ -40,11 +40,11 @@ class TableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.identifier! {
         case "map_new" :
-            let map_new = 0
+            print("map_new")
         case "map_detail":
-            let map_detail = ""
+            print("map_detail")
         default:
-            let huevo = ""
+            print("default")
         }
     }
     
