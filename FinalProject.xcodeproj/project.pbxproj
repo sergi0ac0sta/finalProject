@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49A8074F1D35496400B2EDFE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49A8074D1D35496400B2EDFE /* Model.xcdatamodeld */; };
+		49A807501D35496400B2EDFE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49A8074D1D35496400B2EDFE /* Model.xcdatamodeld */; };
+		49A807511D35496400B2EDFE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49A8074D1D35496400B2EDFE /* Model.xcdatamodeld */; };
+		49A807521D35496400B2EDFE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49A8074D1D35496400B2EDFE /* Model.xcdatamodeld */; };
 		49E9BE121D34737500369F4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE111D34737500369F4A /* AppDelegate.swift */; };
 		49E9BE171D34737500369F4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E9BE151D34737500369F4A /* Main.storyboard */; };
 		49E9BE1A1D34737500369F4A /* FinalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE181D34737500369F4A /* FinalProject.xcdatamodeld */; };
@@ -20,9 +24,9 @@
 		49E9BE481D34820300369F4A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE471D34820300369F4A /* MenuViewController.swift */; };
 		49E9BE491D34820300369F4A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE471D34820300369F4A /* MenuViewController.swift */; };
 		49E9BE4A1D34820300369F4A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE471D34820300369F4A /* MenuViewController.swift */; };
-		49E9BE4C1D34822900369F4A /* TableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE4B1D34822900369F4A /* TableTableViewController.swift */; };
-		49E9BE4D1D34822900369F4A /* TableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE4B1D34822900369F4A /* TableTableViewController.swift */; };
-		49E9BE4E1D34822900369F4A /* TableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE4B1D34822900369F4A /* TableTableViewController.swift */; };
+		49E9BE4C1D34822900369F4A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE4B1D34822900369F4A /* TableViewController.swift */; };
+		49E9BE4D1D34822900369F4A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE4B1D34822900369F4A /* TableViewController.swift */; };
+		49E9BE4E1D34822900369F4A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE4B1D34822900369F4A /* TableViewController.swift */; };
 		49E9BE501D34823E00369F4A /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE4F1D34823E00369F4A /* QRViewController.swift */; };
 		49E9BE511D34823E00369F4A /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE4F1D34823E00369F4A /* QRViewController.swift */; };
 		49E9BE521D34823E00369F4A /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE4F1D34823E00369F4A /* QRViewController.swift */; };
@@ -96,6 +100,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		49A8074E1D35496400B2EDFE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		49E9BE0E1D34737500369F4A /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E9BE111D34737500369F4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49E9BE161D34737500369F4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,7 +116,7 @@
 		49E9BE361D34737600369F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49E9BE431D3481E900369F4A /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		49E9BE471D34820300369F4A /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		49E9BE4B1D34822900369F4A /* TableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableTableViewController.swift; sourceTree = "<group>"; };
+		49E9BE4B1D34822900369F4A /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		49E9BE4F1D34823E00369F4A /* QRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		49E9BE531D34824C00369F4A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		49E9BE591D34827D00369F4A /* FinalProjectWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProjectWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +167,7 @@
 		49E9BE051D34737500369F4A = {
 			isa = PBXGroup;
 			children = (
+				49A8074D1D35496400B2EDFE /* Model.xcdatamodeld */,
 				49E9BE101D34737500369F4A /* FinalProject */,
 				49E9BE281D34737600369F4A /* FinalProjectTests */,
 				49E9BE331D34737600369F4A /* FinalProjectUITests */,
@@ -220,7 +226,7 @@
 			children = (
 				49E9BE431D3481E900369F4A /* NavigationViewController.swift */,
 				49E9BE471D34820300369F4A /* MenuViewController.swift */,
-				49E9BE4B1D34822900369F4A /* TableTableViewController.swift */,
+				49E9BE4B1D34822900369F4A /* TableViewController.swift */,
 				49E9BE4F1D34823E00369F4A /* QRViewController.swift */,
 				49E9BE531D34824C00369F4A /* MapViewController.swift */,
 			);
@@ -450,9 +456,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49E9BE4C1D34822900369F4A /* TableTableViewController.swift in Sources */,
+				49E9BE4C1D34822900369F4A /* TableViewController.swift in Sources */,
 				49E9BE441D3481E900369F4A /* NavigationViewController.swift in Sources */,
 				49E9BE121D34737500369F4A /* AppDelegate.swift in Sources */,
+				49A8074F1D35496400B2EDFE /* Model.xcdatamodeld in Sources */,
 				49E9BE1A1D34737500369F4A /* FinalProject.xcdatamodeld in Sources */,
 				49E9BE481D34820300369F4A /* MenuViewController.swift in Sources */,
 				49E9BE501D34823E00369F4A /* QRViewController.swift in Sources */,
@@ -464,9 +471,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49E9BE4D1D34822900369F4A /* TableTableViewController.swift in Sources */,
+				49E9BE4D1D34822900369F4A /* TableViewController.swift in Sources */,
 				49E9BE551D34824C00369F4A /* MapViewController.swift in Sources */,
 				49E9BE511D34823E00369F4A /* QRViewController.swift in Sources */,
+				49A807501D35496400B2EDFE /* Model.xcdatamodeld in Sources */,
 				49E9BE451D3481E900369F4A /* NavigationViewController.swift in Sources */,
 				49E9BE491D34820300369F4A /* MenuViewController.swift in Sources */,
 				49E9BE2A1D34737600369F4A /* FinalProjectTests.swift in Sources */,
@@ -477,9 +485,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49E9BE4E1D34822900369F4A /* TableTableViewController.swift in Sources */,
+				49E9BE4E1D34822900369F4A /* TableViewController.swift in Sources */,
 				49E9BE561D34824C00369F4A /* MapViewController.swift in Sources */,
 				49E9BE521D34823E00369F4A /* QRViewController.swift in Sources */,
+				49A807511D35496400B2EDFE /* Model.xcdatamodeld in Sources */,
 				49E9BE461D3481E900369F4A /* NavigationViewController.swift in Sources */,
 				49E9BE4A1D34820300369F4A /* MenuViewController.swift in Sources */,
 				49E9BE351D34737600369F4A /* FinalProjectUITests.swift in Sources */,
@@ -493,6 +502,7 @@
 				49E9BE711D34827D00369F4A /* NotificationController.swift in Sources */,
 				49E9BE6F1D34827D00369F4A /* ExtensionDelegate.swift in Sources */,
 				49E9BE6D1D34827D00369F4A /* InterfaceController.swift in Sources */,
+				49A807521D35496400B2EDFE /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,6 +791,7 @@
 				49E9BE3B1D34737600369F4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49E9BE3C1D34737600369F4A /* Build configuration list for PBXNativeTarget "FinalProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -789,6 +800,7 @@
 				49E9BE3E1D34737600369F4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49E9BE3F1D34737600369F4A /* Build configuration list for PBXNativeTarget "FinalProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -797,6 +809,7 @@
 				49E9BE411D34737600369F4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49E9BE781D34827D00369F4A /* Build configuration list for PBXNativeTarget "FinalProjectWatch Extension" */ = {
 			isa = XCConfigurationList;
@@ -805,6 +818,7 @@
 				49E9BE7A1D34827D00369F4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49E9BE7C1D34827D00369F4A /* Build configuration list for PBXNativeTarget "FinalProjectWatch" */ = {
 			isa = XCConfigurationList;
@@ -813,10 +827,21 @@
 				49E9BE7E1D34827D00369F4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		49A8074D1D35496400B2EDFE /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				49A8074E1D35496400B2EDFE /* Model.xcdatamodel */,
+			);
+			currentVersion = 49A8074E1D35496400B2EDFE /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		49E9BE181D34737500369F4A /* FinalProject.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

@@ -1,5 +1,5 @@
 //
-//  TableTableViewController.swift
+//  TableViewController.swift
 //  FinalProject
 //
 //  Created by Sergio Acosta on 11/07/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableTableViewController: UITableViewController {
+class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +37,18 @@ class TableTableViewController: UITableViewController {
         return 0
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch segue.identifier! {
+        case "map_new" :
+            let map_new = 0
+        case "map_detail":
+            let map_detail = ""
+        default:
+            let huevo = ""
+        }
+    }
+    
+    
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
