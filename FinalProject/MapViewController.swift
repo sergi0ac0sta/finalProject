@@ -10,17 +10,18 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
-    private var prevLocation: CLLocation?
-    private var pinDistance: Double = 0.0
-    private var totalDistance: Double = 0.0
+    private var prevLocation: CLLocation? = nil
+    private var pointDistance: Double = 0.0
+    private var registeredPoints: [CLLocation] = [CLLocation]()
     
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        mapView.delegate = self
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
@@ -46,16 +47,18 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locationManager.location!
+        registeredPoints.append(location)
         
+        let locationPlacemark = MKPlacemark(coordinate: location.coordinate, addressDictionary: nil)
+        let locationMapItem = MKMapItem(placemark: locationPlacemark)
         if let prev = prevLocation {
-            pinDistance += location.distanceFromLocation(prev)
-            totalDistance += location.distanceFromLocation(prev)
-            if pinDistance >= 50 {
-                let title = "Latitud: \(Double(round(100*location.coordinate.latitude)/100))º, Longitud: \(Double(round(100*location.coordinate.longitude)/100))º."
-                let subtitle = "Distancia recorrida: \(Int(round(totalDistance)))m."
-                let pin: MKPointAnnotation = setPin(title, subtitle: subtitle, latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-                mapView.addAnnotation(pin)
-                pinDistance = 0
+            pointDistance += location.distanceFromLocation(prev)
+            if pointDistance > 0 {
+                let prevPlacemark = MKPlacemark(coordinate: prev.coordinate, addressDictionary: nil)
+                let prevMapItem = MKMapItem(placemark: prevPlacemark)
+                
+                route(prevMapItem, destination: locationMapItem)
+                pointDistance = 0
             }
         }
         prevLocation = location
@@ -64,11 +67,39 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        let alert = UIAlertController(title: "ERROR", message: "Error \(error.code)", preferredStyle: .Alert)
-        let ok = UIAlertAction(title: "OK", style: .Default, handler: {action in
-            //
+        print(error.description)
+    }
+    
+    func route(origin: MKMapItem, destination: MKMapItem) {
+        let request = MKDirectionsRequest()
+        request.source = origin
+        request.destination = destination
+        request.transportType = .Any
+        
+        let directions = MKDirections(request: request)
+        directions.calculateDirectionsWithCompletionHandler({
+            (response: MKDirectionsResponse?, error: NSError?) in
+            if error != nil {
+                print(error!.description)
+            } else {
+                self.showRoute(response!, origin: origin)
+            }
         })
-        alert.addAction(ok)
-        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func showRoute(response: MKDirectionsResponse, origin: MKMapItem) {
+        for route in response.routes {
+            mapView.addOverlay(route.polyline, level: .AboveLabels)
+            for step in route.steps {
+                print(step.instructions)
+            }
+        }
+    }
+    
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor = UIColor.blueColor()
+        renderer.lineWidth = 3.0
+        return renderer
     }
 }

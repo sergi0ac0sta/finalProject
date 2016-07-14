@@ -3,8 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Proyecto final-->
@@ -63,7 +61,7 @@
                                     <rect key="frame" x="20" y="84" width="50" height="65"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="hkI-RF-TJH" kind="show" id="XNF-e5-oAf"/>
+                                    <segue destination="cDj-s9-Lx8" kind="show" id="X9X-33-4Zm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -125,127 +123,127 @@
             </objects>
             <point key="canvasLocation" x="378" y="348"/>
         </scene>
-        <!--Rutas-->
-        <scene sceneID="ZHA-OD-ciZ">
+        <!--Menú-->
+        <scene sceneID="Zt9-Cs-WV7">
             <objects>
-                <tableViewController id="hkI-RF-TJH" customClass="TableViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="u1t-qZ-GDM">
+                <tableViewController id="MRj-RH-L2c" customClass="TableViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wMj-ER-6cN">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="route_cell" textLabel="tZJ-lI-mgm" detailTextLabel="4we-Q9-HDx" style="IBUITableViewCellStyleValue2" id="25O-OH-fmH">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="route_cell" id="2aI-o1-fHB">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="25O-OH-fmH" id="rtN-Xq-dIt">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2aI-o1-fHB" id="3Ks-bX-lTv">
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tZJ-lI-mgm">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact">
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            </variation>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4we-Q9-HDx">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact">
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            </variation>
-                                        </label>
-                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="OuQ-64-vM9" kind="showDetail" id="CFa-Rx-wsg"/>
+                                    <segue destination="y2I-CT-Z2L" kind="show" identifier="map_detail" id="r9L-sh-Uso"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="hkI-RF-TJH" id="cay-ux-8RJ"/>
-                            <outlet property="delegate" destination="hkI-RF-TJH" id="Huf-Ub-SfN"/>
+                            <outlet property="dataSource" destination="MRj-RH-L2c" id="HJw-fw-VIO"/>
+                            <outlet property="delegate" destination="MRj-RH-L2c" id="SBH-ac-vJb"/>
                         </connections>
                     </tableView>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Rutas" id="Gg3-hW-QIR">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1uv-HG-lr1">
+                    <navigationItem key="navigationItem" title="Menú" id="msu-md-Jbc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hPo-H3-wOp">
                             <connections>
-                                <segue destination="OuQ-64-vM9" kind="showDetail" identifier="map_new" id="W1Y-R3-wKq"/>
+                                <segue destination="y2I-CT-Z2L" kind="show" identifier="map_new" id="XKp-Hq-Wum"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xCa-ZD-8jD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Jp-P4-aOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1132.5" y="1129"/>
+            <point key="canvasLocation" x="-376.5" y="1134"/>
         </scene>
-        <!--Title-->
-        <scene sceneID="BzK-5C-LJo">
+        <!--Map View Controller-->
+        <scene sceneID="jSA-8N-UyR">
             <objects>
-                <viewController id="OuQ-64-vM9" customClass="MapViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="y2I-CT-Z2L" customClass="MapViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Dq6-3J-LqP"/>
-                        <viewControllerLayoutGuide type="bottom" id="l4n-Cy-4fx"/>
+                        <viewControllerLayoutGuide type="top" id="dxr-r1-hzI"/>
+                        <viewControllerLayoutGuide type="bottom" id="ize-g9-iuK"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Z3s-jR-Rpj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="FHS-6P-r9S">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cfG-cV-lAe">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rb8-TV-Ui8">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="492" id="URY-bA-4ZK"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="URY-bA-4ZK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="URY-bA-4ZK"/>
+                                    </mask>
+                                </variation>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cfG-cV-lAe" firstAttribute="leading" secondItem="Z3s-jR-Rpj" secondAttribute="leading" id="7ID-ah-Pfw"/>
-                            <constraint firstAttribute="trailing" secondItem="cfG-cV-lAe" secondAttribute="trailing" id="GvI-Rz-8Ir"/>
-                            <constraint firstItem="cfG-cV-lAe" firstAttribute="top" secondItem="Z3s-jR-Rpj" secondAttribute="top" id="WzG-4e-z3l"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="cfG-cV-lAe" secondAttribute="bottom" constant="39" id="dzA-tV-Puc"/>
+                            <constraint firstItem="rb8-TV-Ui8" firstAttribute="leading" secondItem="FHS-6P-r9S" secondAttribute="leading" id="9Tj-39-cyN"/>
+                            <constraint firstAttribute="trailing" secondItem="rb8-TV-Ui8" secondAttribute="trailing" id="Yq0-oU-a8u"/>
+                            <constraint firstItem="rb8-TV-Ui8" firstAttribute="top" secondItem="dxr-r1-hzI" secondAttribute="bottom" id="wor-aG-Uii"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="cfG-cV-lAe"/>
+                                <exclude reference="rb8-TV-Ui8"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="7ID-ah-Pfw"/>
-                                <exclude reference="GvI-Rz-8Ir"/>
-                                <exclude reference="WzG-4e-z3l"/>
-                                <exclude reference="dzA-tV-Puc"/>
+                                <exclude reference="9Tj-39-cyN"/>
+                                <exclude reference="Yq0-oU-a8u"/>
+                                <exclude reference="wor-aG-Uii"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="cfG-cV-lAe"/>
+                                <include reference="rb8-TV-Ui8"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="7ID-ah-Pfw"/>
-                                <include reference="GvI-Rz-8Ir"/>
-                                <include reference="WzG-4e-z3l"/>
-                                <include reference="dzA-tV-Puc"/>
+                                <include reference="9Tj-39-cyN"/>
+                                <include reference="Yq0-oU-a8u"/>
+                                <include reference="wor-aG-Uii"/>
                             </mask>
                         </variation>
                     </view>
                     <toolbarItems>
-                        <barButtonItem systemItem="camera" id="Dyt-nb-Gbh"/>
-                        <barButtonItem title="QR" width="284" id="TpD-WK-f3h">
-                            <connections>
-                                <segue destination="JKG-0j-8hq" kind="show" id="qmU-yb-pAw"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem systemItem="save" id="Z6d-HC-rGj"/>
+                        <barButtonItem systemItem="camera" id="Br1-xq-KyC"/>
+                        <barButtonItem title="QR" width="283" id="7zo-6h-qLg"/>
+                        <barButtonItem systemItem="save" id="x2F-gG-cwA"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Title" id="0KB-87-IWT"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="mapView" destination="cfG-cV-lAe" id="dOz-IT-xfG"/>
+                        <outlet property="mapView" destination="rb8-TV-Ui8" id="KL4-XY-Msl"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Trk-E1-Xac" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vga-dB-KwR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-391.5" y="1129"/>
+            <point key="canvasLocation" x="349.5" y="1134"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jaZ-nF-sBt">
+            <objects>
+                <navigationController toolbarHidden="NO" id="cDj-s9-Lx8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pt3-As-FLz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="VWX-Tf-1MH">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="MRj-RH-L2c" kind="relationship" relationship="rootViewController" id="kGR-AP-FZq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P8d-U5-ImT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1132.5" y="1129"/>
         </scene>
     </scenes>
     <resources>
@@ -254,7 +252,6 @@
         <image name="icon_qr" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="W1Y-R3-wKq"/>
-        <segue reference="qmU-yb-pAw"/>
+        <segue reference="XKp-Hq-Wum"/>
     </inferredMetricsTieBreakers>
 </document>
