@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		493AF7381D3C15B2000EAA7B /* SaveRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF7371D3C15B2000EAA7B /* SaveRouteViewController.swift */; };
+		493AF7391D3C15B2000EAA7B /* SaveRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF7371D3C15B2000EAA7B /* SaveRouteViewController.swift */; };
+		493AF73A1D3C15B2000EAA7B /* SaveRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF7371D3C15B2000EAA7B /* SaveRouteViewController.swift */; };
+		49850BEF1D3C5261002A49D7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49850BEE1D3C5261002A49D7 /* WebViewController.swift */; };
+		49850BF01D3C5261002A49D7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49850BEE1D3C5261002A49D7 /* WebViewController.swift */; };
+		49850BF11D3C5261002A49D7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49850BEE1D3C5261002A49D7 /* WebViewController.swift */; };
 		49A8074F1D35496400B2EDFE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49A8074D1D35496400B2EDFE /* Model.xcdatamodeld */; };
 		49A807501D35496400B2EDFE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49A8074D1D35496400B2EDFE /* Model.xcdatamodeld */; };
 		49A807511D35496400B2EDFE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49A8074D1D35496400B2EDFE /* Model.xcdatamodeld */; };
@@ -100,6 +106,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		493AF7371D3C15B2000EAA7B /* SaveRouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveRouteViewController.swift; sourceTree = "<group>"; };
+		493AF73B1D3C2DC7000EAA7B /* FinalProjectWatch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "FinalProjectWatch Extension.entitlements"; sourceTree = "<group>"; };
+		49850BEE1D3C5261002A49D7 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		49A8074E1D35496400B2EDFE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		49E9BE0E1D34737500369F4A /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E9BE111D34737500369F4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -229,6 +238,8 @@
 				49E9BE4B1D34822900369F4A /* TableViewController.swift */,
 				49E9BE4F1D34823E00369F4A /* QRViewController.swift */,
 				49E9BE531D34824C00369F4A /* MapViewController.swift */,
+				493AF7371D3C15B2000EAA7B /* SaveRouteViewController.swift */,
+				49850BEE1D3C5261002A49D7 /* WebViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -246,6 +257,7 @@
 		49E9BE691D34827D00369F4A /* FinalProjectWatch Extension */ = {
 			isa = PBXGroup;
 			children = (
+				493AF73B1D3C2DC7000EAA7B /* FinalProjectWatch Extension.entitlements */,
 				49E9BE6C1D34827D00369F4A /* InterfaceController.swift */,
 				49E9BE6E1D34827D00369F4A /* ExtensionDelegate.swift */,
 				49E9BE701D34827D00369F4A /* NotificationController.swift */,
@@ -380,9 +392,16 @@
 					};
 					49E9BE581D34827D00369F4A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = L9B8JU68WF;
 					};
 					49E9BE641D34827D00369F4A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = L9B8JU68WF;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -460,11 +479,13 @@
 				49E9BE4C1D34822900369F4A /* TableViewController.swift in Sources */,
 				49E9BE441D3481E900369F4A /* NavigationViewController.swift in Sources */,
 				49E9BE121D34737500369F4A /* AppDelegate.swift in Sources */,
+				49850BEF1D3C5261002A49D7 /* WebViewController.swift in Sources */,
 				49A8074F1D35496400B2EDFE /* Model.xcdatamodeld in Sources */,
 				49E9BE1A1D34737500369F4A /* FinalProject.xcdatamodeld in Sources */,
 				49E9BE481D34820300369F4A /* MenuViewController.swift in Sources */,
 				49E9BE501D34823E00369F4A /* QRViewController.swift in Sources */,
 				49E9BE541D34824C00369F4A /* MapViewController.swift in Sources */,
+				493AF7381D3C15B2000EAA7B /* SaveRouteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,10 +494,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				49E9BE4D1D34822900369F4A /* TableViewController.swift in Sources */,
+				49850BF01D3C5261002A49D7 /* WebViewController.swift in Sources */,
 				49E9BE551D34824C00369F4A /* MapViewController.swift in Sources */,
 				49E9BE511D34823E00369F4A /* QRViewController.swift in Sources */,
 				49A807501D35496400B2EDFE /* Model.xcdatamodeld in Sources */,
 				49E9BE451D3481E900369F4A /* NavigationViewController.swift in Sources */,
+				493AF7391D3C15B2000EAA7B /* SaveRouteViewController.swift in Sources */,
 				49E9BE491D34820300369F4A /* MenuViewController.swift in Sources */,
 				49E9BE2A1D34737600369F4A /* FinalProjectTests.swift in Sources */,
 			);
@@ -487,10 +510,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				49E9BE4E1D34822900369F4A /* TableViewController.swift in Sources */,
+				49850BF11D3C5261002A49D7 /* WebViewController.swift in Sources */,
 				49E9BE561D34824C00369F4A /* MapViewController.swift in Sources */,
 				49E9BE521D34823E00369F4A /* QRViewController.swift in Sources */,
 				49A807511D35496400B2EDFE /* Model.xcdatamodeld in Sources */,
 				49E9BE461D3481E900369F4A /* NavigationViewController.swift in Sources */,
+				493AF73A1D3C15B2000EAA7B /* SaveRouteViewController.swift in Sources */,
 				49E9BE4A1D34820300369F4A /* MenuViewController.swift in Sources */,
 				49E9BE351D34737600369F4A /* FinalProjectUITests.swift in Sources */,
 			);
@@ -578,6 +603,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -624,6 +650,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -722,10 +749,14 @@
 		49E9BE791D34827D00369F4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "FinalProjectWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.sergioacosta.FinalProject.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -736,10 +767,14 @@
 		49E9BE7A1D34827D00369F4A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "FinalProjectWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.sergioacosta.FinalProject.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -751,6 +786,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = FinalProjectWatch_Extension;
 				INFOPLIST_FILE = FinalProjectWatch/Info.plist;
@@ -767,6 +803,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = FinalProjectWatch_Extension;
 				INFOPLIST_FILE = FinalProjectWatch/Info.plist;

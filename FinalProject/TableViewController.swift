@@ -38,13 +38,12 @@ class TableViewController: UITableViewController {
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let nextView = segue.destinationViewController as! MapViewController
         switch segue.identifier! {
-        case "map_new" :
-            print("map_new")
         case "map_detail":
-            print("map_detail")
+            nextView.capture = false
         default:
-            print("default")
+            nextView.capture = true
         }
     }
     /*

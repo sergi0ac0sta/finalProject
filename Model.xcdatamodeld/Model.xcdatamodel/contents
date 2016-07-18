@@ -3,6 +3,8 @@
     <entity name="Coordinates" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="routeid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="x" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="y" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <relationship name="point_pin" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pins" inverseName="pin_point" inverseEntity="Pins" syncable="YES"/>
         <relationship name="route_points" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Route" inverseName="points_route" inverseEntity="Route" syncable="YES"/>
     </entity>
@@ -13,14 +15,14 @@
     </entity>
     <entity name="Route" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="routedescription" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="points_route" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Coordinates" inverseName="route_points" inverseEntity="Coordinates" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Route" positionX="-54" positionY="-48" width="128" height="118"/>
-        <element name="Coordinates" positionX="-243" positionY="-90" width="128" height="103"/>
+        <element name="Coordinates" positionX="-243" positionY="-90" width="128" height="135"/>
         <element name="Pins" positionX="-56" positionY="-229" width="128" height="88"/>
+        <element name="Route" positionX="-54" positionY="-48" width="128" height="120"/>
     </elements>
 </model>

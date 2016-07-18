@@ -14,10 +14,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     private let locationManager = CLLocationManager()
     private var prevLocation: CLLocation? = nil
     private var pointDistance: Double = 0.0
-    private var registeredPoints: [CLLocation] = [CLLocation]()
+    private var capturedPoints: [CLLocation] = [CLLocation]()
+    private var overlays: [MKOverlay] = [MKOverlay]()
+    
+    var capture: Bool = true
+    var inView: Bool = false
     
     @IBOutlet weak var mapView: MKMapView!
-    
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +30,33 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        inView = true
+        saveButton.enabled = false
+        capturedPoints.removeAll()
+        
+        if capture {
+            saveButton.enabled = true
+            locationManager.startUpdatingLocation()
+            mapView.showsUserLocation = true
+        }
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        inView = false
+        prevLocation = nil
+        mapView.removeOverlays(overlays)
+        overlays.removeAll()
+        
+        locationManager.stopUpdatingLocation()
+        mapView.showsUserLocation = false
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let nextView = segue.destinationViewController as! SaveRouteViewController
+        nextView.capturedPoints = capturedPoints
     }
     
     func setPin(title: String, subtitle: String, latitude: Double, longitude: Double) -> MKPointAnnotation {
@@ -36,7 +68,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        if status == .AuthorizedWhenInUse {
+        if status == .AuthorizedWhenInUse && capture {
             locationManager.startUpdatingLocation()
             mapView.showsUserLocation = true
         } else {
@@ -46,24 +78,26 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locationManager.location!
-        registeredPoints.append(location)
+        if capture && inView {
+            let location = locationManager.location!
+            capturedPoints.append(location)
         
-        let locationPlacemark = MKPlacemark(coordinate: location.coordinate, addressDictionary: nil)
-        let locationMapItem = MKMapItem(placemark: locationPlacemark)
-        if let prev = prevLocation {
-            pointDistance += location.distanceFromLocation(prev)
-            if pointDistance > 0 {
-                let prevPlacemark = MKPlacemark(coordinate: prev.coordinate, addressDictionary: nil)
-                let prevMapItem = MKMapItem(placemark: prevPlacemark)
+            let locationPlacemark = MKPlacemark(coordinate: location.coordinate, addressDictionary: nil)
+            let locationMapItem = MKMapItem(placemark: locationPlacemark)
+            if let prev = prevLocation {
+                pointDistance += location.distanceFromLocation(prev)
+                if pointDistance > 0 {
+                    let prevPlacemark = MKPlacemark(coordinate: prev.coordinate, addressDictionary: nil)
+                    let prevMapItem = MKMapItem(placemark: prevPlacemark)
                 
-                route(prevMapItem, destination: locationMapItem)
-                pointDistance = 0
+                    route(prevMapItem, destination: locationMapItem)
+                    pointDistance = 0
+                }
             }
+            prevLocation = location
+            let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 500, 500)
+            mapView.setRegion(region, animated: true)
         }
-        prevLocation = location
-        let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 500, 500)
-        mapView.setRegion(region, animated: true)
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
@@ -90,13 +124,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func showRoute(response: MKDirectionsResponse, origin: MKMapItem) {
         for route in response.routes {
             mapView.addOverlay(route.polyline, level: .AboveLabels)
-            for step in route.steps {
-                print(step.instructions)
-            }
         }
     }
     
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        overlays.append(overlay)
         let renderer = MKPolylineRenderer(overlay: overlay)
         renderer.strokeColor = UIColor.blueColor()
         renderer.lineWidth = 3.0
