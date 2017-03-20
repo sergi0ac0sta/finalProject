@@ -16,8 +16,8 @@ class WebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let curl = NSURL(string: urls!)
-        let request = NSURLRequest(URL: curl!)
+        let curl = URL(string: urls!)
+        let request = URLRequest(url: curl!)
         webView.loadRequest(request)
     }
 }

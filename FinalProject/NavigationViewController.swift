@@ -16,9 +16,9 @@ class NavigationViewController: UINavigationController {
         // Do any additional setup after loading the view.
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let origin = sender as! QRViewController
-        let vc = segue.destinationViewController as! WebViewController
+        let vc = segue.destination as! WebViewController
         origin.session?.stopRunning()
         vc.urls = origin.urls
     }

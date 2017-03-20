@@ -15,16 +15,16 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     var frame: UIView?
     var urls: String?
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         session?.startRunning()
-        frame?.frame = CGRectZero
+        frame?.frame = CGRect.zero
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = "QR"
-        let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+        let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         do {
             let input = try AVCaptureDeviceInput(device: device)
             session = AVCaptureSession()
@@ -32,7 +32,7 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             
             let metaData = AVCaptureMetadataOutput()
             session?.addOutput(metaData)
-            metaData.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())
+            metaData.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             metaData.metadataObjectTypes = [AVMetadataObjectTypeQRCode]
             layer = AVCaptureVideoPreviewLayer(session: session)
             layer?.videoGravity = AVLayerVideoGravityResizeAspectFill
@@ -40,7 +40,7 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             view.layer.addSublayer(layer!)
             frame = UIView()
             frame!.layer.borderWidth = 3
-            frame!.layer.borderColor = UIColor.redColor().CGColor
+            frame!.layer.borderColor = UIColor.red.cgColor
             view.addSubview(frame!)
             session?.startRunning()
         } catch let error as NSError {
@@ -53,8 +53,8 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         // Dispose of any resources that can be recreated.
     }
     
-    func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
-        frame!.frame = CGRectZero
+    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
+        frame!.frame = CGRect.zero
         if metadataObjects == nil || metadataObjects.count == 0 {
             return
         }
@@ -65,7 +65,7 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             if objMetadata.stringValue != nil {
                 self.urls = objMetadata.stringValue
                 let navc = self.navigationController
-                navc?.performSegueWithIdentifier("webSegue", sender: self)
+                navc?.performSegue(withIdentifier: "webSegue", sender: self)
             }
         }
     }

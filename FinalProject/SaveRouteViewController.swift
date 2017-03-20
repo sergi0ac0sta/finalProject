@@ -10,9 +10,9 @@ import UIKit
 import CoreLocation
 
 class SaveRouteViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    private let picker = UIImagePickerController()
+    fileprivate let picker = UIImagePickerController()
     
-    var capturedPoints: [CLLocation] = [CLLocation]()
+    var location: CLLocation = CLLocation()
     var capturedImage: UIImage? = nil
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -20,30 +20,30 @@ class SaveRouteViewController: UIViewController, UITextFieldDelegate, UITextView
     @IBOutlet weak var imageSelector: UISegmentedControl!
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBAction func backgroundTap(sender: UIControl) {
+    @IBAction func backgroundTap(_ sender: UIControl) {
         nameTextField.resignFirstResponder()
         descriptionTextView.resignFirstResponder()
     }
     
-    @IBAction func textFieldDidEndEditing(textField: UITextField) {
+    @IBAction func textFieldDidEndEditing(_ textField: UITextField) {
         textField.resignFirstResponder()
     }
     
-    @IBAction func selectImageAction(sender: UISegmentedControl) {
+    @IBAction func selectImageAction(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
             case 1:
-                picker.sourceType = UIImagePickerControllerSourceType.Camera
-                presentViewController(picker, animated: true, completion: nil)
+                picker.sourceType = UIImagePickerControllerSourceType.camera
+                present(picker, animated: true, completion: nil)
             case 2:
-                picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-                presentViewController(picker, animated: true, completion: nil)
+                picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+                present(picker, animated: true, completion: nil)
             default:
                 capturedImage = nil
                 imageView.image = nil
         }
     }
     
-    @IBAction func saveButtonAction(sender: UIBarButtonItem) {
+    @IBAction func saveButtonAction(_ sender: UIBarButtonItem) {
         if nameTextField.text == ""{
             sendAlert("Error", message: "Debes ingresar al menos nombre a la ruta.")
         } else {
@@ -57,37 +57,38 @@ class SaveRouteViewController: UIViewController, UITextFieldDelegate, UITextView
         nameTextField.delegate = self
         descriptionTextView.delegate = self
         picker.delegate = self
+        print(location.coordinate.latitude)
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         nameTextField.text = "";
         descriptionTextView.text = "";
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         if imageView.image == nil {
             imageSelector.selectedSegmentIndex = 0
         }
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         capturedImage = image
         imageView.image = image
-        picker.dismissViewControllerAnimated(true, completion: nil)
+        picker.dismiss(animated: true, completion: nil)
     }
     
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        picker.dismissViewControllerAnimated(true, completion: nil)
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
     
-    func sendAlert(title: String, message: String) {
+    func sendAlert(_ title: String, message: String) {
         let alert = UIAlertController(title: title,
                                       message: message,
-                                      preferredStyle: UIAlertControllerStyle.Alert)
+                                      preferredStyle: UIAlertControllerStyle.alert)
         let action = UIAlertAction(title: "OK",
-                                   style: UIAlertActionStyle.Cancel) { _ in
+                                   style: UIAlertActionStyle.cancel) { _ in
         }
         alert.addAction(action)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
 }

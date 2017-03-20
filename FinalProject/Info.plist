@@ -45,6 +45,10 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>here</string>
+	<key>NSCameraUsageDescription</key>
+	<string>capture images</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>save images from gallery</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
