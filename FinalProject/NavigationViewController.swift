@@ -17,9 +17,12 @@ class NavigationViewController: UINavigationController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let origin = sender as! QRViewController
-        let vc = segue.destination as! WebViewController
-        origin.session?.stopRunning()
-        vc.urls = origin.urls
+        
+        if segue.identifier != "routeSegue" && segue.identifier != "qrSegue" {
+            let origin = sender as! QRViewController
+            let vc = segue.destination as! WebViewController
+            origin.session?.stopRunning()
+            vc.urls = origin.urls
+        }
     }
 }

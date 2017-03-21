@@ -8,12 +8,15 @@
 
 import UIKit
 import CoreLocation
+import CoreData
 
 class SaveRouteViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     fileprivate let picker = UIImagePickerController()
     
+    var context: NSManagedObjectContext? = nil
     var location: CLLocation = CLLocation()
     var capturedImage: UIImage? = nil
+    var capturedPoints: [CLLocation] = [CLLocation]()
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
@@ -47,7 +50,20 @@ class SaveRouteViewController: UIViewController, UITextFieldDelegate, UITextView
         if nameTextField.text == ""{
             sendAlert("Error", message: "Debes ingresar al menos nombre a la ruta.")
         } else {
-            //Save
+            let entity = NSEntityDescription.insertNewObject(forEntityName: "Route", into: self.context!)
+            entity.setValue(nameTextField.text, forKey: "name")
+            entity.setValue(descriptionTextView.text, forKey: "descript")
+            entity.setValue(convertPointsToString(), forKey: "locationPoints")
+            
+            if let image = capturedImage{
+                entity.setValue(UIImagePNGRepresentation(image), forKey: "image")
+            }
+            
+            do {
+                try self.context?.save()
+                let nav = self.navigationController
+                nav?.performSegue(withIdentifier: "routeSegue", sender: self)
+            } catch{}
         }
     }
     
@@ -57,7 +73,8 @@ class SaveRouteViewController: UIViewController, UITextFieldDelegate, UITextView
         nameTextField.delegate = self
         descriptionTextView.delegate = self
         picker.delegate = self
-        print(location.coordinate.latitude)
+        
+        self.context = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -75,6 +92,15 @@ class SaveRouteViewController: UIViewController, UITextFieldDelegate, UITextView
         capturedImage = image
         imageView.image = image
         picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func convertPointsToString() -> String {
+        var stringPoints = ""
+        
+        for point in capturedPoints {
+            stringPoints += String(point.coordinate.latitude) + ":" + String(point.coordinate.longitude) + "|"
+        }
+        return stringPoints
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

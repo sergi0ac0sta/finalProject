@@ -16,7 +16,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     fileprivate var pointDistance: Double = 0.0
     
     fileprivate var currentLocation: CLLocation = CLLocation()
-    fileprivate var capturedPoints: [CLLocation] = [CLLocation]()
+    public var capturedPoints: [CLLocation] = [CLLocation]()
     fileprivate var overlays: [MKOverlay] = [MKOverlay]()
     
     var capture: Bool = true
@@ -59,6 +59,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextView = segue.destination as! SaveRouteViewController
         nextView.location = currentLocation
+        nextView.capturedPoints = self.capturedPoints
     }
     
     func setPin(_ title: String, subtitle: String, latitude: Double, longitude: Double) -> MKPointAnnotation {

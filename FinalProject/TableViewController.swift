@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class TableViewController: UITableViewController {
-
+    var context: NSManagedObjectContext? = nil
+    var data: [Route] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +21,25 @@ class TableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        data.removeAll()
+        self.context = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
+        let entity = NSEntityDescription.insertNewObject(forEntityName: "Route", into: self.context!)
+        let request: NSFetchRequest<Route> = Route.fetchRequest()
+
+        do {
+            let results = try entity.managedObjectContext?.fetch(request)
+
+            for r in results! {
+                if let _ = r.name {
+                    data.append(r)
+                }
+                
+            }
+            
+        } catch {
+            fatalError("Failed to fetch routes: \(error)")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,32 +51,31 @@ class TableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return data.count
     }
-
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "route_cell", for: indexPath as IndexPath) as! TableViewCell
+        
+        cell.label.text = data[indexPath.row].name
+        return cell
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextView = segue.destination as! MapViewController
         switch segue.identifier! {
         case "map_detail":
-            nextView.capture = false
+            let nextView = segue.destination as! ShowMapViewController
+            nextView.route = data[(self.tableView.indexPathForSelectedRow?.row)!]
         default:
+            let nextView = segue.destination as! MapViewController
             nextView.capture = true
         }
     }
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
 
     /*
     // Override to support conditional editing of the table view.

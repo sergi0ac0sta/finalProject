@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13AE6C911E809A2500704A22 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE6C901E809A2500704A22 /* TableViewCell.swift */; };
+		13AE6C931E80A7B400704A22 /* ShowMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE6C921E80A7B400704A22 /* ShowMapViewController.swift */; };
+		13AE6C951E80C03500704A22 /* ImageAnnotationClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE6C941E80C03500704A22 /* ImageAnnotationClasses.swift */; };
 		493AF7381D3C15B2000EAA7B /* SaveRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF7371D3C15B2000EAA7B /* SaveRouteViewController.swift */; };
-		493AF7391D3C15B2000EAA7B /* SaveRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF7371D3C15B2000EAA7B /* SaveRouteViewController.swift */; };
-		493AF73A1D3C15B2000EAA7B /* SaveRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF7371D3C15B2000EAA7B /* SaveRouteViewController.swift */; };
 		496BB1691D3F0A4800CAC0DA /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496BB1681D3F0A4800CAC0DA /* File.swift */; };
 		496BB16A1D3F0A4800CAC0DA /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496BB1681D3F0A4800CAC0DA /* File.swift */; };
 		496BB16B1D3F0A4800CAC0DA /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496BB1681D3F0A4800CAC0DA /* File.swift */; };
@@ -35,8 +36,6 @@
 		49E9BE491D34820300369F4A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE471D34820300369F4A /* MenuViewController.swift */; };
 		49E9BE4A1D34820300369F4A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE471D34820300369F4A /* MenuViewController.swift */; };
 		49E9BE4C1D34822900369F4A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE4B1D34822900369F4A /* TableViewController.swift */; };
-		49E9BE4D1D34822900369F4A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE4B1D34822900369F4A /* TableViewController.swift */; };
-		49E9BE4E1D34822900369F4A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE4B1D34822900369F4A /* TableViewController.swift */; };
 		49E9BE501D34823E00369F4A /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE4F1D34823E00369F4A /* QRViewController.swift */; };
 		49E9BE511D34823E00369F4A /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE4F1D34823E00369F4A /* QRViewController.swift */; };
 		49E9BE521D34823E00369F4A /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE4F1D34823E00369F4A /* QRViewController.swift */; };
@@ -110,6 +109,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		13AE6C901E809A2500704A22 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		13AE6C921E80A7B400704A22 /* ShowMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMapViewController.swift; sourceTree = "<group>"; };
+		13AE6C941E80C03500704A22 /* ImageAnnotationClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAnnotationClasses.swift; sourceTree = "<group>"; };
 		493AF7371D3C15B2000EAA7B /* SaveRouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveRouteViewController.swift; sourceTree = "<group>"; };
 		493AF73B1D3C2DC7000EAA7B /* FinalProjectWatch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "FinalProjectWatch Extension.entitlements"; sourceTree = "<group>"; };
 		496BB1681D3F0A4800CAC0DA /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
@@ -182,6 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				496BB1681D3F0A4800CAC0DA /* File.swift */,
+				13AE6C901E809A2500704A22 /* TableViewCell.swift */,
+				13AE6C941E80C03500704A22 /* ImageAnnotationClasses.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -254,6 +258,7 @@
 				49E9BE531D34824C00369F4A /* MapViewController.swift */,
 				493AF7371D3C15B2000EAA7B /* SaveRouteViewController.swift */,
 				49850BEE1D3C5261002A49D7 /* WebViewController.swift */,
+				13AE6C921E80A7B400704A22 /* ShowMapViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -497,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49E9BE4C1D34822900369F4A /* TableViewController.swift in Sources */,
+				13AE6C931E80A7B400704A22 /* ShowMapViewController.swift in Sources */,
 				49E9BE441D3481E900369F4A /* NavigationViewController.swift in Sources */,
 				49E9BE121D34737500369F4A /* AppDelegate.swift in Sources */,
 				49850BEF1D3C5261002A49D7 /* WebViewController.swift in Sources */,
@@ -505,8 +511,10 @@
 				49E9BE481D34820300369F4A /* MenuViewController.swift in Sources */,
 				49E9BE501D34823E00369F4A /* QRViewController.swift in Sources */,
 				49E9BE541D34824C00369F4A /* MapViewController.swift in Sources */,
+				13AE6C911E809A2500704A22 /* TableViewCell.swift in Sources */,
 				496BB1691D3F0A4800CAC0DA /* File.swift in Sources */,
 				493AF7381D3C15B2000EAA7B /* SaveRouteViewController.swift in Sources */,
+				13AE6C951E80C03500704A22 /* ImageAnnotationClasses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,14 +522,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49E9BE4D1D34822900369F4A /* TableViewController.swift in Sources */,
 				49850BF01D3C5261002A49D7 /* WebViewController.swift in Sources */,
 				49E9BE551D34824C00369F4A /* MapViewController.swift in Sources */,
 				49E9BE511D34823E00369F4A /* QRViewController.swift in Sources */,
 				49A807501D35496400B2EDFE /* Model.xcdatamodeld in Sources */,
 				496BB16A1D3F0A4800CAC0DA /* File.swift in Sources */,
 				49E9BE451D3481E900369F4A /* NavigationViewController.swift in Sources */,
-				493AF7391D3C15B2000EAA7B /* SaveRouteViewController.swift in Sources */,
 				49E9BE491D34820300369F4A /* MenuViewController.swift in Sources */,
 				49E9BE2A1D34737600369F4A /* FinalProjectTests.swift in Sources */,
 			);
@@ -531,14 +537,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49E9BE4E1D34822900369F4A /* TableViewController.swift in Sources */,
 				49850BF11D3C5261002A49D7 /* WebViewController.swift in Sources */,
 				49E9BE561D34824C00369F4A /* MapViewController.swift in Sources */,
 				49E9BE521D34823E00369F4A /* QRViewController.swift in Sources */,
 				49A807511D35496400B2EDFE /* Model.xcdatamodeld in Sources */,
 				496BB16B1D3F0A4800CAC0DA /* File.swift in Sources */,
 				49E9BE461D3481E900369F4A /* NavigationViewController.swift in Sources */,
-				493AF73A1D3C15B2000EAA7B /* SaveRouteViewController.swift in Sources */,
 				49E9BE4A1D34820300369F4A /* MenuViewController.swift in Sources */,
 				49E9BE351D34737600369F4A /* FinalProjectUITests.swift in Sources */,
 			);
