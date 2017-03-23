@@ -32,9 +32,9 @@ class ShowMapViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         let coords = convertIntoKeyValuePair()
         var prevLocation: CLLocation? = nil
         
-        for (lat,long) in coords {
-            let currentLocation = CLLocation(latitude: lat, longitude: long)
-            let locationPlacemark = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: long), addressDictionary: nil)
+        for (name,c) in coords {
+            let currentLocation = CLLocation(latitude: (c.first?.key)!, longitude: (c.first?.value)!)
+            let locationPlacemark = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: (c.first?.key)!, longitude: (c.first?.value)!), addressDictionary: nil)
             let locationMapItem = MKMapItem(placemark: locationPlacemark)
             if let prev = prevLocation {
                 pointDistance += currentLocation.distance(from: prev)
@@ -48,11 +48,11 @@ class ShowMapViewController: UIViewController, MKMapViewDelegate, CLLocationMana
             }
             prevLocation = currentLocation
             let region = MKCoordinateRegionMakeWithDistance(currentLocation.coordinate, 500, 500)
-            
             mapView.setRegion(region, animated: true)
+            setPin(name, subtitle: "", latitude: (c.first?.key)!, longitude: (c.first?.value)!)
         }
         setImagePin(route!.name!, subtitle: route!.descript!, image: route!.image as Data?,latitude: (prevLocation?.coordinate.latitude)!, longitude: (prevLocation?.coordinate.longitude)!)
-        setPin(route!.name!, subtitle: route!.descript!, latitude: (prevLocation?.coordinate.latitude)!, longitude: (prevLocation?.coordinate.longitude)!)
+        //setPin(route!.name!, subtitle: route!.descript!, latitude: (prevLocation?.coordinate.latitude)!, longitude: (prevLocation?.coordinate.longitude)!)
         
         // Do any additional setup after loading the view.
     }
@@ -62,14 +62,18 @@ class ShowMapViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         // Dispose of any resources that can be recreated.
     }
     
-    func convertIntoKeyValuePair() -> [Double:Double] {
-        var coords: [Double: Double] = [:]
+    func convertIntoKeyValuePair() -> [String:[Double:Double]] {
+        var coords: [String:[Double: Double]] = [:]
         let points:[String] = (route?.locationPoints?.components(separatedBy: "|"))!
         
         for point in points {
             if point.contains(":"){
                 let latLog = point.components(separatedBy: ":")
-                coords.updateValue(Double(latLog[1])!, forKey: Double(latLog[0])!)
+                
+                var c: [Double: Double] = [:]
+                c.updateValue(Double(latLog[2])!, forKey: Double(latLog[1])!)
+                
+                coords.updateValue(c, forKey: String(latLog[0])!)
             }
         }
         return coords

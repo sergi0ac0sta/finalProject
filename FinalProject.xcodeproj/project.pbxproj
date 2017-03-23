@@ -40,8 +40,6 @@
 		49E9BE511D34823E00369F4A /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE4F1D34823E00369F4A /* QRViewController.swift */; };
 		49E9BE521D34823E00369F4A /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE4F1D34823E00369F4A /* QRViewController.swift */; };
 		49E9BE541D34824C00369F4A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE531D34824C00369F4A /* MapViewController.swift */; };
-		49E9BE551D34824C00369F4A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE531D34824C00369F4A /* MapViewController.swift */; };
-		49E9BE561D34824C00369F4A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE531D34824C00369F4A /* MapViewController.swift */; };
 		49E9BE5D1D34827D00369F4A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E9BE5B1D34827D00369F4A /* Interface.storyboard */; };
 		49E9BE5F1D34827D00369F4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E9BE5E1D34827D00369F4A /* Assets.xcassets */; };
 		49E9BE661D34827D00369F4A /* FinalProjectWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 49E9BE651D34827D00369F4A /* FinalProjectWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -523,7 +521,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				49850BF01D3C5261002A49D7 /* WebViewController.swift in Sources */,
-				49E9BE551D34824C00369F4A /* MapViewController.swift in Sources */,
 				49E9BE511D34823E00369F4A /* QRViewController.swift in Sources */,
 				49A807501D35496400B2EDFE /* Model.xcdatamodeld in Sources */,
 				496BB16A1D3F0A4800CAC0DA /* File.swift in Sources */,
@@ -538,7 +535,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				49850BF11D3C5261002A49D7 /* WebViewController.swift in Sources */,
-				49E9BE561D34824C00369F4A /* MapViewController.swift in Sources */,
 				49E9BE521D34823E00369F4A /* QRViewController.swift in Sources */,
 				49A807511D35496400B2EDFE /* Model.xcdatamodeld in Sources */,
 				496BB16B1D3F0A4800CAC0DA /* File.swift in Sources */,

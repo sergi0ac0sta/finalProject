@@ -225,7 +225,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2aI-o1-fHB" id="3Ks-bX-lTv">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSW-7H-Tyj">
@@ -308,6 +308,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Ruta" id="Wev-1w-xJb">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="6qY-hw-bHv">
+                            <connections>
+                                <action selector="addPin:" destination="PI2-iY-c92" id="ceD-fF-538"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="en0-9Q-D5o">
                             <connections>
                                 <segue destination="HL9-Pu-p0n" kind="show" id="tQx-nC-k7Q"/>
@@ -322,9 +327,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6F-gV-xxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1135" y="1866"/>
+            <point key="canvasLocation" x="-1135.2" y="1865.217391304348"/>
         </scene>
-        <!--Punto de interés-->
+        <!--Guardar ruta-->
         <scene sceneID="l60-Xq-OTa">
             <objects>
                 <viewController id="HL9-Pu-p0n" customClass="SaveRouteViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -336,8 +341,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guardar punto de interés" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eze-6O-6Pi">
-                                <rect key="frame" x="16" y="72" width="262" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guardar ruta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eze-6O-6Pi">
+                                <rect key="frame" x="16" y="72" width="133.5" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -515,7 +520,7 @@
                         </connections>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Punto de interés" id="PWJ-9b-HiT">
+                    <navigationItem key="navigationItem" title="Guardar ruta" id="PWJ-9b-HiT">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="ZiI-Gw-TQ3">
                             <connections>
                                 <action selector="saveButtonAction:" destination="HL9-Pu-p0n" id="zRh-On-OGd"/>

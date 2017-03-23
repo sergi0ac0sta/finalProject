@@ -16,7 +16,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     fileprivate var pointDistance: Double = 0.0
     
     fileprivate var currentLocation: CLLocation = CLLocation()
-    public var capturedPoints: [CLLocation] = [CLLocation]()
+    public var capturedPoints: [String: CLLocation] = [String: CLLocation]()
     fileprivate var overlays: [MKOverlay] = [MKOverlay]()
     
     var capture: Bool = true
@@ -62,6 +62,32 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         nextView.capturedPoints = self.capturedPoints
     }
     
+    @IBAction func addPin(_ sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: "Nombre", message: "Ingresa un nombre al punto de interés", preferredStyle: .alert)
+        
+        let confirmAction = UIAlertAction(title: "Confirmacion", style: .default) { (_) in
+            UserDefaults.standard.set(alertController.textFields![0].text, forKey: "pin")
+            UserDefaults.standard.synchronize()
+            self.capturedPoints.updateValue(self.locationManager.location!, forKey: alertController.textFields![0].text!)
+            let pin = self.setPin(alertController.textFields![0].text!, subtitle: "", latitude: (self.capturedPoints[alertController.textFields![0].text!]?.coordinate.latitude)!, longitude: (self.capturedPoints[alertController.textFields![0].text!]?.coordinate.longitude)!)
+            
+            DispatchQueue.main.async {
+                self.mapView.addAnnotation(pin)
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel) { (_) in }
+        
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Nombre"
+        }
+        
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    
     func setPin(_ title: String, subtitle: String, latitude: Double, longitude: Double) -> MKPointAnnotation {
         let pin = MKPointAnnotation()
         pin.title = title
@@ -83,17 +109,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if capture && inView {
             currentLocation = locationManager.location!
-            capturedPoints.append(currentLocation)
         
-            let locationPlacemark = MKPlacemark(coordinate: currentLocation.coordinate, addressDictionary: nil)
-            let locationMapItem = MKMapItem(placemark: locationPlacemark)
+            //let locationPlacemark = MKPlacemark(coordinate: currentLocation.coordinate, addressDictionary: nil)
+            //let locationMapItem = MKMapItem(placemark: locationPlacemark)
             if let prev = prevLocation {
                 pointDistance += currentLocation.distance(from: prev)
                 if pointDistance > 0 {
-                    let prevPlacemark = MKPlacemark(coordinate: prev.coordinate, addressDictionary: nil)
-                    let prevMapItem = MKMapItem(placemark: prevPlacemark)
+                    //let prevPlacemark = MKPlacemark(coordinate: prev.coordinate, addressDictionary: nil)
+                    //let prevMapItem = MKMapItem(placemark: prevPlacemark)
                 
-                    route(prevMapItem, destination: locationMapItem)
+                    //route(prevMapItem, destination: locationMapItem)
                     pointDistance = 0
                 }
             }

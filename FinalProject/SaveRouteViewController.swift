@@ -16,7 +16,7 @@ class SaveRouteViewController: UIViewController, UITextFieldDelegate, UITextView
     var context: NSManagedObjectContext? = nil
     var location: CLLocation = CLLocation()
     var capturedImage: UIImage? = nil
-    var capturedPoints: [CLLocation] = [CLLocation]()
+    public var capturedPoints: [String: CLLocation] = [String: CLLocation]()
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
@@ -97,8 +97,8 @@ class SaveRouteViewController: UIViewController, UITextFieldDelegate, UITextView
     func convertPointsToString() -> String {
         var stringPoints = ""
         
-        for point in capturedPoints {
-            stringPoints += String(point.coordinate.latitude) + ":" + String(point.coordinate.longitude) + "|"
+        for (name,point) in capturedPoints {
+            stringPoints += name + ":" + String(point.coordinate.latitude) + ":" + String(point.coordinate.longitude) + "|"
         }
         return stringPoints
     }
