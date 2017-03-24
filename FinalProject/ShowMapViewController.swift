@@ -154,7 +154,7 @@ class ShowMapViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         let request = MKDirectionsRequest()
         request.source = origin
         request.destination = destination
-        request.transportType = .any
+        request.transportType = .walking
         
         let directions = MKDirections(request: request)
         directions.calculate(completionHandler: {
