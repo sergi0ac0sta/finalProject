@@ -71,9 +71,11 @@ class ShowMapViewController: UIViewController, MKMapViewDelegate, CLLocationMana
                 let latLog = point.components(separatedBy: ":")
                 
                 var c: [Double: Double] = [:]
-                c.updateValue(Double(latLog[2])!, forKey: Double(latLog[1])!)
+                if latLog.count == 3 {
+                    c.updateValue(Double(latLog[2])!, forKey: Double(latLog[1])!)
                 
-                coords.updateValue(c, forKey: String(latLog[0])!)
+                    coords.updateValue(c, forKey: String(latLog[0])!)
+                }
             }
         }
         return coords
