@@ -8,14 +8,20 @@
 
 import UIKit
 import CoreData
+import WatchConnectivity
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     var window: UIWindow?
-
-
+    var session: WCSession?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        if WCSession.isSupported() {
+            session = WCSession.default()
+            session?.delegate = self
+            session?.activate()
+        }
         return true
     }
 
@@ -105,6 +111,69 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        if let e = error {
+            print(e)
+        } else {
+            print("iOS App: Active watch session")
+        }
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        if message["message"] != nil {
+            switch message["message"] as! String {
+            case "getRoutes":
+                let entity = NSEntityDescription.insertNewObject(forEntityName: "Route", into: managedObjectContext)
+                let request: NSFetchRequest<Route> = Route.fetchRequest()
+                var data: [String] = []
+                do {
+                    let results = try entity.managedObjectContext?.fetch(request)
+            
+                    for r in results! {
+                        if let name = r.name {
+                            data.append(name)
+                        }
+                    }
+                    replyHandler(["routes": data])
+                } catch {
+                    replyHandler(["error": error])
+                }
+            default:
+                replyHandler(["error": "mensaje desconocido"])
+            }
+        } else if message["getRoute"] != nil {
+            do {
+                let entity = NSEntityDescription.insertNewObject(forEntityName: "Route", into: managedObjectContext)
+                let request: NSFetchRequest<Route> = Route.fetchRequest()
+                let name: String = message["getRoute"] as! String
+                request.predicate = NSPredicate(format: "name == %@", name)
+            
+                let result = try entity.managedObjectContext?.fetch(request)
+                
+                var data: [String: String] = [:]
+                
+                for r in result! {
+                    data.updateValue(r.name!, forKey: "name")
+                    data.updateValue(r.descript!, forKey: "description")
+                    data.updateValue(r.locationPoints!, forKey: "points")
+                }
+                replyHandler(["route": data])
+                
+            } catch {
+                replyHandler(["error": error])
+            }
+        } else {
+            replyHandler(["error": "mensaje desconocido"])
+        }
+    }
 
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        print("Inactive")
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        print("Deactivate")
+    }
 }
 

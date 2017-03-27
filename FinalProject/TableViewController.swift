@@ -34,9 +34,7 @@ class TableViewController: UITableViewController {
                 if let _ = r.name {
                     data.append(r)
                 }
-                
             }
-            
         } catch {
             fatalError("Failed to fetch routes: \(error)")
         }
