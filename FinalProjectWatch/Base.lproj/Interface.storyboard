@@ -28,8 +28,10 @@
                                 </tableRow>
                             </items>
                         </table>
+                        <label width="127" height="51" alignment="left" hidden="YES" text="No hay rutas" textAlignment="center" id="BEe-Nb-Evj"/>
                     </items>
                     <connections>
+                        <outlet property="noRoutesLabel" destination="BEe-Nb-Evj" id="a2e-Iv-b8K"/>
                         <outlet property="tableView" destination="lr3-b8-nnz" id="KsZ-h4-zWO"/>
                     </connections>
                 </controller>

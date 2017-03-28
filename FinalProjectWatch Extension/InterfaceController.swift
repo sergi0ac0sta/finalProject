@@ -14,6 +14,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     var session: WCSession? = nil
     
     @IBOutlet var tableView: WKInterfaceTable!
+    @IBOutlet var noRoutesLabel: WKInterfaceLabel!
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -59,7 +60,14 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     func getRoutes(session: WCSession) {
         session.sendMessage(["message": "getRoutes"], replyHandler:
             {(reply: [String: Any]) -> Void in
-                self.setTable(routes: reply["routes"] as! [String])
+                self.noRoutesLabel.setHidden(true)
+                let routes = reply["routes"] as! [String]
+                if routes.count > 0 {
+                    self.setTable(routes: routes)
+                } else {
+                    self.noRoutesLabel.setHidden(false)
+                }
+                
         }, errorHandler: {
             (error: Error) -> Void in
             print(error)
