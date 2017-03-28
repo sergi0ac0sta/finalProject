@@ -10,6 +10,21 @@
 		13AE6C911E809A2500704A22 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE6C901E809A2500704A22 /* TableViewCell.swift */; };
 		13AE6C931E80A7B400704A22 /* ShowMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE6C921E80A7B400704A22 /* ShowMapViewController.swift */; };
 		13AE6C951E80C03500704A22 /* ImageAnnotationClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE6C941E80C03500704A22 /* ImageAnnotationClasses.swift */; };
+		13D9C6A81E8ACB1A00D04CEB /* ARAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9C6A31E8ACB1A00D04CEB /* ARAnnotation.swift */; };
+		13D9C6A91E8ACB1A00D04CEB /* ARAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9C6A41E8ACB1A00D04CEB /* ARAnnotationView.swift */; };
+		13D9C6AA1E8ACB1A00D04CEB /* ARConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9C6A51E8ACB1A00D04CEB /* ARConfiguration.swift */; };
+		13D9C6AB1E8ACB1A00D04CEB /* ARTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9C6A61E8ACB1A00D04CEB /* ARTrackingManager.swift */; };
+		13D9C6AC1E8ACB1A00D04CEB /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9C6A71E8ACB1A00D04CEB /* ARViewController.swift */; };
+		13D9C6AE1E8ACB4300D04CEB /* DebugMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9C6AD1E8ACB4300D04CEB /* DebugMapViewController.swift */; };
+		13D9C6B41E8ACB8700D04CEB /* DebugMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13D9C6B01E8ACB8700D04CEB /* DebugMapViewController.xib */; };
+		13D9C6B51E8ACB8700D04CEB /* hdar_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 13D9C6B11E8ACB8700D04CEB /* hdar_close.png */; };
+		13D9C6B61E8ACB8700D04CEB /* hdar_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13D9C6B21E8ACB8700D04CEB /* hdar_close@2x.png */; };
+		13D9C6B71E8ACB8700D04CEB /* hdar_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13D9C6B31E8ACB8700D04CEB /* hdar_close@3x.png */; };
+		13D9C6BA1E8ACC7A00D04CEB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D9C6B91E8ACC7A00D04CEB /* CoreLocation.framework */; };
+		13D9C6BC1E8ACC8200D04CEB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D9C6BB1E8ACC8200D04CEB /* CoreMotion.framework */; };
+		13D9C6BE1E8ACC8D00D04CEB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D9C6BD1E8ACC8D00D04CEB /* MapKit.framework */; };
+		13D9C6C01E8ACDFF00D04CEB /* CustomARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9C6BF1E8ACDFF00D04CEB /* CustomARViewController.swift */; };
+		13D9C6C21E8ACE9C00D04CEB /* TestAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9C6C11E8ACE9C00D04CEB /* TestAnnotationView.swift */; };
 		13F352751E89807300810095 /* TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F352741E89807300810095 /* TableRow.swift */; };
 		13F352771E8984F200810095 /* MapInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F352761E8984F200810095 /* MapInterfaceController.swift */; };
 		493AF7381D3C15B2000EAA7B /* SaveRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF7371D3C15B2000EAA7B /* SaveRouteViewController.swift */; };
@@ -20,10 +35,6 @@
 		49850BEF1D3C5261002A49D7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49850BEE1D3C5261002A49D7 /* WebViewController.swift */; };
 		49850BF01D3C5261002A49D7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49850BEE1D3C5261002A49D7 /* WebViewController.swift */; };
 		49850BF11D3C5261002A49D7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49850BEE1D3C5261002A49D7 /* WebViewController.swift */; };
-		49A8074F1D35496400B2EDFE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49A8074D1D35496400B2EDFE /* Model.xcdatamodeld */; };
-		49A807501D35496400B2EDFE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49A8074D1D35496400B2EDFE /* Model.xcdatamodeld */; };
-		49A807511D35496400B2EDFE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49A8074D1D35496400B2EDFE /* Model.xcdatamodeld */; };
-		49A807521D35496400B2EDFE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49A8074D1D35496400B2EDFE /* Model.xcdatamodeld */; };
 		49E9BE121D34737500369F4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE111D34737500369F4A /* AppDelegate.swift */; };
 		49E9BE171D34737500369F4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E9BE151D34737500369F4A /* Main.storyboard */; };
 		49E9BE1A1D34737500369F4A /* FinalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49E9BE181D34737500369F4A /* FinalProject.xcdatamodeld */; };
@@ -114,13 +125,27 @@
 		13AE6C901E809A2500704A22 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		13AE6C921E80A7B400704A22 /* ShowMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMapViewController.swift; sourceTree = "<group>"; };
 		13AE6C941E80C03500704A22 /* ImageAnnotationClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAnnotationClasses.swift; sourceTree = "<group>"; };
+		13D9C6A31E8ACB1A00D04CEB /* ARAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotation.swift; sourceTree = "<group>"; };
+		13D9C6A41E8ACB1A00D04CEB /* ARAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotationView.swift; sourceTree = "<group>"; };
+		13D9C6A51E8ACB1A00D04CEB /* ARConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARConfiguration.swift; sourceTree = "<group>"; };
+		13D9C6A61E8ACB1A00D04CEB /* ARTrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARTrackingManager.swift; sourceTree = "<group>"; };
+		13D9C6A71E8ACB1A00D04CEB /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		13D9C6AD1E8ACB4300D04CEB /* DebugMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMapViewController.swift; sourceTree = "<group>"; };
+		13D9C6B01E8ACB8700D04CEB /* DebugMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugMapViewController.xib; sourceTree = "<group>"; };
+		13D9C6B11E8ACB8700D04CEB /* hdar_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hdar_close.png; sourceTree = "<group>"; };
+		13D9C6B21E8ACB8700D04CEB /* hdar_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@2x.png"; sourceTree = "<group>"; };
+		13D9C6B31E8ACB8700D04CEB /* hdar_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@3x.png"; sourceTree = "<group>"; };
+		13D9C6B91E8ACC7A00D04CEB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		13D9C6BB1E8ACC8200D04CEB /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		13D9C6BD1E8ACC8D00D04CEB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		13D9C6BF1E8ACDFF00D04CEB /* CustomARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomARViewController.swift; sourceTree = "<group>"; };
+		13D9C6C11E8ACE9C00D04CEB /* TestAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestAnnotationView.swift; sourceTree = "<group>"; };
 		13F352741E89807300810095 /* TableRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRow.swift; sourceTree = "<group>"; };
 		13F352761E8984F200810095 /* MapInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInterfaceController.swift; sourceTree = "<group>"; };
 		493AF7371D3C15B2000EAA7B /* SaveRouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveRouteViewController.swift; sourceTree = "<group>"; };
 		493AF73B1D3C2DC7000EAA7B /* FinalProjectWatch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "FinalProjectWatch Extension.entitlements"; sourceTree = "<group>"; };
 		496BB1681D3F0A4800CAC0DA /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		49850BEE1D3C5261002A49D7 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		49A8074E1D35496400B2EDFE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		49E9BE0E1D34737500369F4A /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E9BE111D34737500369F4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49E9BE161D34737500369F4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,6 +182,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13D9C6BE1E8ACC8D00D04CEB /* MapKit.framework in Frameworks */,
+				13D9C6BC1E8ACC8200D04CEB /* CoreMotion.framework in Frameworks */,
+				13D9C6BA1E8ACC7A00D04CEB /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +212,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13D9C6A01E8ACAE600D04CEB /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				13D9C6AF1E8ACB6200D04CEB /* Resources */,
+				13D9C6A11E8ACAEA00D04CEB /* Classes */,
+			);
+			name = AR;
+			sourceTree = "<group>";
+		};
+		13D9C6A11E8ACAEA00D04CEB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				13D9C6A21E8ACAF100D04CEB /* Debug */,
+				13D9C6A31E8ACB1A00D04CEB /* ARAnnotation.swift */,
+				13D9C6A41E8ACB1A00D04CEB /* ARAnnotationView.swift */,
+				13D9C6A51E8ACB1A00D04CEB /* ARConfiguration.swift */,
+				13D9C6A61E8ACB1A00D04CEB /* ARTrackingManager.swift */,
+				13D9C6A71E8ACB1A00D04CEB /* ARViewController.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		13D9C6A21E8ACAF100D04CEB /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				13D9C6AD1E8ACB4300D04CEB /* DebugMapViewController.swift */,
+			);
+			name = Debug;
+			sourceTree = "<group>";
+		};
+		13D9C6AF1E8ACB6200D04CEB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				13D9C6B01E8ACB8700D04CEB /* DebugMapViewController.xib */,
+				13D9C6B11E8ACB8700D04CEB /* hdar_close.png */,
+				13D9C6B21E8ACB8700D04CEB /* hdar_close@2x.png */,
+				13D9C6B31E8ACB8700D04CEB /* hdar_close@3x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		13D9C6B81E8ACC7A00D04CEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13D9C6BD1E8ACC8D00D04CEB /* MapKit.framework */,
+				13D9C6BB1E8ACC8200D04CEB /* CoreMotion.framework */,
+				13D9C6B91E8ACC7A00D04CEB /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		496BB1671D3F0A0000CAC0DA /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,13 +276,13 @@
 		49E9BE051D34737500369F4A = {
 			isa = PBXGroup;
 			children = (
-				49A8074D1D35496400B2EDFE /* Model.xcdatamodeld */,
 				49E9BE101D34737500369F4A /* FinalProject */,
 				49E9BE281D34737600369F4A /* FinalProjectTests */,
 				49E9BE331D34737600369F4A /* FinalProjectUITests */,
 				49E9BE5A1D34827D00369F4A /* FinalProjectWatch */,
 				49E9BE691D34827D00369F4A /* FinalProjectWatch Extension */,
 				49E9BE0F1D34737500369F4A /* Products */,
+				13D9C6B81E8ACC7A00D04CEB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,10 +301,12 @@
 		49E9BE101D34737500369F4A /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				13D9C6A01E8ACAE600D04CEB /* AR */,
 				133E3EC21E885ABE00755FD7 /* FinalProject.entitlements */,
 				496BB1671D3F0A0000CAC0DA /* Models */,
 				49E9BE421D3481BF00369F4A /* Controllers */,
 				49E9BE111D34737500369F4A /* AppDelegate.swift */,
+				13D9C6C11E8ACE9C00D04CEB /* TestAnnotationView.swift */,
 				49E9BE151D34737500369F4A /* Main.storyboard */,
 				49E9BE1B1D34737500369F4A /* Assets.xcassets */,
 				49E9BE1D1D34737500369F4A /* LaunchScreen.storyboard */,
@@ -264,6 +345,7 @@
 				493AF7371D3C15B2000EAA7B /* SaveRouteViewController.swift */,
 				49850BEE1D3C5261002A49D7 /* WebViewController.swift */,
 				13AE6C921E80A7B400704A22 /* ShowMapViewController.swift */,
+				13D9C6BF1E8ACDFF00D04CEB /* CustomARViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -479,8 +561,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				49E9BE1F1D34737500369F4A /* LaunchScreen.storyboard in Resources */,
+				13D9C6B51E8ACB8700D04CEB /* hdar_close.png in Resources */,
+				13D9C6B71E8ACB8700D04CEB /* hdar_close@3x.png in Resources */,
 				49E9BE1C1D34737500369F4A /* Assets.xcassets in Resources */,
 				49E9BE171D34737500369F4A /* Main.storyboard in Resources */,
+				13D9C6B61E8ACB8700D04CEB /* hdar_close@2x.png in Resources */,
+				13D9C6B41E8ACB8700D04CEB /* DebugMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,19 +608,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13D9C6C01E8ACDFF00D04CEB /* CustomARViewController.swift in Sources */,
 				49E9BE4C1D34822900369F4A /* TableViewController.swift in Sources */,
 				13AE6C931E80A7B400704A22 /* ShowMapViewController.swift in Sources */,
+				13D9C6AA1E8ACB1A00D04CEB /* ARConfiguration.swift in Sources */,
+				13D9C6C21E8ACE9C00D04CEB /* TestAnnotationView.swift in Sources */,
+				13D9C6AE1E8ACB4300D04CEB /* DebugMapViewController.swift in Sources */,
+				13D9C6AB1E8ACB1A00D04CEB /* ARTrackingManager.swift in Sources */,
 				49E9BE441D3481E900369F4A /* NavigationViewController.swift in Sources */,
 				49E9BE121D34737500369F4A /* AppDelegate.swift in Sources */,
 				49850BEF1D3C5261002A49D7 /* WebViewController.swift in Sources */,
-				49A8074F1D35496400B2EDFE /* Model.xcdatamodeld in Sources */,
 				49E9BE1A1D34737500369F4A /* FinalProject.xcdatamodeld in Sources */,
 				49E9BE481D34820300369F4A /* MenuViewController.swift in Sources */,
 				49E9BE501D34823E00369F4A /* QRViewController.swift in Sources */,
 				49E9BE541D34824C00369F4A /* MapViewController.swift in Sources */,
+				13D9C6A91E8ACB1A00D04CEB /* ARAnnotationView.swift in Sources */,
 				13AE6C911E809A2500704A22 /* TableViewCell.swift in Sources */,
+				13D9C6AC1E8ACB1A00D04CEB /* ARViewController.swift in Sources */,
 				496BB1691D3F0A4800CAC0DA /* File.swift in Sources */,
 				493AF7381D3C15B2000EAA7B /* SaveRouteViewController.swift in Sources */,
+				13D9C6A81E8ACB1A00D04CEB /* ARAnnotation.swift in Sources */,
 				13AE6C951E80C03500704A22 /* ImageAnnotationClasses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,7 +638,6 @@
 			files = (
 				49850BF01D3C5261002A49D7 /* WebViewController.swift in Sources */,
 				49E9BE511D34823E00369F4A /* QRViewController.swift in Sources */,
-				49A807501D35496400B2EDFE /* Model.xcdatamodeld in Sources */,
 				496BB16A1D3F0A4800CAC0DA /* File.swift in Sources */,
 				49E9BE451D3481E900369F4A /* NavigationViewController.swift in Sources */,
 				49E9BE491D34820300369F4A /* MenuViewController.swift in Sources */,
@@ -559,7 +651,6 @@
 			files = (
 				49850BF11D3C5261002A49D7 /* WebViewController.swift in Sources */,
 				49E9BE521D34823E00369F4A /* QRViewController.swift in Sources */,
-				49A807511D35496400B2EDFE /* Model.xcdatamodeld in Sources */,
 				496BB16B1D3F0A4800CAC0DA /* File.swift in Sources */,
 				49E9BE461D3481E900369F4A /* NavigationViewController.swift in Sources */,
 				49E9BE4A1D34820300369F4A /* MenuViewController.swift in Sources */,
@@ -576,7 +667,6 @@
 				49E9BE6F1D34827D00369F4A /* ExtensionDelegate.swift in Sources */,
 				49E9BE6D1D34827D00369F4A /* InterfaceController.swift in Sources */,
 				13F352771E8984F200810095 /* MapInterfaceController.swift in Sources */,
-				49A807521D35496400B2EDFE /* Model.xcdatamodeld in Sources */,
 				13F352751E89807300810095 /* TableRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -951,16 +1041,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		49A8074D1D35496400B2EDFE /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				49A8074E1D35496400B2EDFE /* Model.xcdatamodel */,
-			);
-			currentVersion = 49A8074E1D35496400B2EDFE /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		49E9BE181D34737500369F4A /* FinalProject.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

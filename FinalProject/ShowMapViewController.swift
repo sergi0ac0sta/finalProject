@@ -12,6 +12,7 @@ import CoreLocation
 
 class ShowMapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     var route: Route? = nil
+    
     fileprivate var overlays: [MKOverlay] = [MKOverlay]()
     fileprivate let locationManager = CLLocationManager()
     fileprivate var pointDistance: Double = 0.0
@@ -42,7 +43,7 @@ class ShowMapViewController: UIViewController, MKMapViewDelegate, CLLocationMana
                     let prevPlacemark = MKPlacemark(coordinate: prev.coordinate, addressDictionary: nil)
                     let prevMapItem = MKMapItem(placemark: prevPlacemark)
                     
-                    route(prevMapItem, destination: locationMapItem)
+                    presentRoute(prevMapItem, destination: locationMapItem)
                     pointDistance = 0
                 }
             }
@@ -170,7 +171,7 @@ class ShowMapViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         }
     }
     
-    func route(_ origin: MKMapItem, destination: MKMapItem) {
+    func presentRoute(_ origin: MKMapItem, destination: MKMapItem) {
         let request = MKDirectionsRequest()
         request.source = origin
         request.destination = destination
@@ -204,14 +205,9 @@ class ShowMapViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         self.mapView.translatesAutoresizingMaskIntoConstraints = false
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let destination = segue.destination as! CustomARViewController
+         destination.route = self.route
     }
-    */
 
 }

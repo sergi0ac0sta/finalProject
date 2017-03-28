@@ -47,10 +47,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="q66-Md-KBR">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="84"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="VFl-Bz-naA">
-                                <rect key="frame" x="90" y="84" width="50" height="65"/>
+                                <rect key="frame" x="100" y="84" width="50" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <inset key="titleEdgeInsets" minX="-50" minY="50" maxX="0.0" maxY="0.0"/>
@@ -59,6 +59,18 @@
                                 </state>
                                 <connections>
                                     <action selector="qr:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EYt-1E-bCs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="LoL-7A-6cc" userLabel="CDMX">
+                                <rect key="frame" x="180" y="84" width="50" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="titleEdgeInsets" minX="-50" minY="50" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="CDMX" image="icon_cdmx">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="qr:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m7b-Ne-H28"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxW-1s-QLm">
@@ -71,6 +83,19 @@
                                 </state>
                                 <connections>
                                     <action selector="routes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sl7-tz-h7s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="l9L-G6-lVa" userLabel="CDMX">
+                                <rect key="frame" x="260" y="84" width="50" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="titleEdgeInsets" minX="-50" minY="50" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Acerca de" image="icon_about">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="qr:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gux-f4-saP"/>
+                                    <segue destination="4Lv-c7-f3p" kind="show" id="0oe-yo-uBg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -114,6 +139,47 @@
             </objects>
             <point key="canvasLocation" x="-346" y="697"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="0tj-X6-oqa">
+            <objects>
+                <viewController id="4Lv-c7-f3p" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RkL-O5-V4q"/>
+                        <viewControllerLayoutGuide type="bottom" id="8bF-q2-y2p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WdF-pN-C7Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Proyecto final" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQT-iP-AYQ">
+                                <rect key="frame" x="16" y="72" width="165" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RW0-Lg-OD5">
+                                <rect key="frame" x="16" y="110" width="99" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sergio A. Acosta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fw-ig-bbR">
+                                <rect key="frame" x="211" y="561" width="148" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hol-aR-hQZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="469.60000000000002" y="696.7016491754124"/>
+        </scene>
         <!--QR-->
         <scene sceneID="rCY-BJ-ig5">
             <objects>
@@ -146,7 +212,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uoc-3B-JtS">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="84"/>
                                 <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
@@ -215,7 +281,11 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem systemItem="camera" id="a4H-vb-SVE"/>
+                        <barButtonItem systemItem="camera" id="a4H-vb-SVE">
+                            <connections>
+                                <segue destination="x0J-o5-GYH" kind="show" id="xlq-cD-OK6"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Ruta" id="l0d-oW-Qru">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="Mpw-cZ-jIE">
@@ -233,6 +303,24 @@
             </objects>
             <point key="canvasLocation" x="-2191.1999999999998" y="1865.217391304348"/>
         </scene>
+        <!--CustomAR View Controller-->
+        <scene sceneID="ky7-H5-Fxf">
+            <objects>
+                <viewController id="x0J-o5-GYH" customClass="CustomARViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mgs-jG-XMw"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZKF-ml-sVP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kvn-Jd-MAq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BzS-8a-6ty" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2190" y="2564"/>
+        </scene>
         <!--Rutas-->
         <scene sceneID="Zt9-Cs-WV7">
             <objects>
@@ -246,7 +334,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2aI-o1-fHB" id="3Ks-bX-lTv">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSW-7H-Tyj">
@@ -562,6 +650,8 @@
     </scenes>
     <resources>
         <image name="background" width="2400" height="1723"/>
+        <image name="icon_about" width="50" height="50"/>
+        <image name="icon_cdmx" width="50" height="50"/>
         <image name="icon_map" width="50" height="50"/>
         <image name="icon_qr" width="50" height="50"/>
     </resources>
