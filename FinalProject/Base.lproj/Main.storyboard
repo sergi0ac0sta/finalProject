@@ -61,18 +61,6 @@
                                     <action selector="qr:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EYt-1E-bCs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="LoL-7A-6cc" userLabel="CDMX">
-                                <rect key="frame" x="180" y="84" width="50" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <inset key="titleEdgeInsets" minX="-50" minY="50" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="CDMX" image="icon_cdmx">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="qr:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m7b-Ne-H28"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxW-1s-QLm">
                                 <rect key="frame" x="20" y="84" width="50" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -85,17 +73,25 @@
                                     <action selector="routes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sl7-tz-h7s"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="l9L-G6-lVa" userLabel="CDMX">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="AVS-4w-sNP">
+                                <rect key="frame" x="180" y="84" width="50" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="titleEdgeInsets" minX="-50" minY="50" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="CDMX" image="icon_cdmx">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="voN-By-NiA">
                                 <rect key="frame" x="260" y="84" width="50" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <inset key="titleEdgeInsets" minX="-50" minY="50" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Acerca de" image="icon_about">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="qr:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gux-f4-saP"/>
-                                    <segue destination="4Lv-c7-f3p" kind="show" id="0oe-yo-uBg"/>
+                                    <segue destination="4Lv-c7-f3p" kind="show" id="Ucn-dD-Ien"/>
                                 </connections>
                             </button>
                         </subviews>
