@@ -14,11 +14,15 @@
         <!--Proyecto final-->
         <scene sceneID="4GC-ks-yWJ">
             <objects>
-                <navigationController title="Proyecto final" id="iI9-Rz-9dN" customClass="NavigationViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController title="Proyecto final" toolbarHidden="NO" id="iI9-Rz-9dN" customClass="NavigationViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ecO-4c-npN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ClQ-A8-Aob">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hkd-tR-lgs"/>
                         <segue destination="kZ8-aM-aRB" kind="show" identifier="webSegue" id="eRN-6z-lrN"/>
@@ -185,7 +189,7 @@
             </objects>
             <point key="canvasLocation" x="-346" y="1"/>
         </scene>
-        <!--Show Map View Controller-->
+        <!--Ruta-->
         <scene sceneID="o3k-iI-1rj">
             <objects>
                 <viewController id="tbj-LE-wWc" customClass="ShowMapViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -197,13 +201,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="64g-XZ-c6P">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="64g-XZ-c6P">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="64g-XZ-c6P" firstAttribute="centerX" secondItem="rx2-od-4pZ" secondAttribute="centerX" id="4n4-Vq-Sbt"/>
+                            <constraint firstItem="DUI-y4-IZA" firstAttribute="top" secondItem="64g-XZ-c6P" secondAttribute="bottom" id="5YA-pB-5c1"/>
+                            <constraint firstItem="64g-XZ-c6P" firstAttribute="leading" secondItem="rx2-od-4pZ" secondAttribute="leading" id="J82-Bv-nuK"/>
+                            <constraint firstAttribute="trailing" secondItem="64g-XZ-c6P" secondAttribute="trailing" id="Zw7-am-1zc"/>
+                            <constraint firstItem="64g-XZ-c6P" firstAttribute="top" secondItem="oSW-ZW-DUv" secondAttribute="bottom" id="bE4-xd-Qga"/>
+                        </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="camera" id="a4H-vb-SVE"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Ruta" id="l0d-oW-Qru">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Mpw-cZ-jIE">
+                            <connections>
+                                <action selector="share:" destination="tbj-LE-wWc" id="NjE-aM-1Ab"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="64g-XZ-c6P" id="IU2-Iv-FRh"/>
                     </connections>

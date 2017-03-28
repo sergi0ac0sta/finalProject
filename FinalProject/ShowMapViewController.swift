@@ -62,6 +62,25 @@ class ShowMapViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func share(_ sender: UIBarButtonItem) {
+        print(route!.name!)
+        
+        var url = "https://maps.google.com/maps?q="
+
+        let coords = convertIntoKeyValuePair()
+        for (_,c) in coords {
+            url += "\(c.first!.key)" + "," + "\(c.first!.value)"
+            url += "&ll=" + "\(c.first!.key)" + "," + "\(c.first!.value)"
+            url += "&spn=0.005&t=k"
+            break
+        }
+        print(url)
+        let data: [Any] = [route!.name!, URL(string: url)!]
+        let activity = UIActivityViewController(activityItems: data, applicationActivities: nil)
+        self.present(activity, animated: true, completion: nil)
+    }
+    
+    
     func convertIntoKeyValuePair() -> [String:[Double:Double]] {
         var coords: [String:[Double: Double]] = [:]
         let points:[String] = (route?.locationPoints?.components(separatedBy: "|"))!
@@ -73,7 +92,6 @@ class ShowMapViewController: UIViewController, MKMapViewDelegate, CLLocationMana
                 var c: [Double: Double] = [:]
                 if latLog.count == 3 {
                     c.updateValue(Double(latLog[2])!, forKey: Double(latLog[1])!)
-                
                     coords.updateValue(c, forKey: String(latLog[0])!)
                 }
             }
