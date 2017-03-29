@@ -263,10 +263,4 @@ class ShowMapViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         self.mapView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         self.mapView.translatesAutoresizingMaskIntoConstraints = false
     }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! CustomARViewController
-         destination.route = self.route
-    }
-
 }
