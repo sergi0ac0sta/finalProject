@@ -282,7 +282,7 @@
                     <toolbarItems>
                         <barButtonItem systemItem="camera" id="a4H-vb-SVE">
                             <connections>
-                                <segue destination="x0J-o5-GYH" kind="show" id="xlq-cD-OK6"/>
+                                <action selector="startAR:" destination="tbj-LE-wWc" id="P10-bb-3d1"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
@@ -302,24 +302,6 @@
             </objects>
             <point key="canvasLocation" x="-2191.1999999999998" y="1865.217391304348"/>
         </scene>
-        <!--CustomAR View Controller-->
-        <scene sceneID="ky7-H5-Fxf">
-            <objects>
-                <viewController id="x0J-o5-GYH" customClass="CustomARViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Mgs-jG-XMw"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZKF-ml-sVP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Kvn-Jd-MAq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BzS-8a-6ty" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2190" y="2564"/>
-        </scene>
         <!--Rutas-->
         <scene sceneID="Zt9-Cs-WV7">
             <objects>
@@ -333,7 +315,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2aI-o1-fHB" id="3Ks-bX-lTv">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSW-7H-Tyj">
@@ -659,7 +641,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ivl-hD-2ze" id="xAt-Ix-ea6">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
