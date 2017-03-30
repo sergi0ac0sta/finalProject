@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13810E0B1E8D69230057D902 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 13810E0A1E8D69230057D902 /* data.json */; };
+		13810E0E1E8D6E720057D902 /* CDMXTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13810E0D1E8D6E720057D902 /* CDMXTableViewCell.swift */; };
+		138E14F91E8D78B30020B840 /* CDMXTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138E14F81E8D78B30020B840 /* CDMXTableViewController.swift */; };
 		13AE6C911E809A2500704A22 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE6C901E809A2500704A22 /* TableViewCell.swift */; };
 		13AE6C931E80A7B400704A22 /* ShowMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE6C921E80A7B400704A22 /* ShowMapViewController.swift */; };
 		13AE6C951E80C03500704A22 /* ImageAnnotationClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE6C941E80C03500704A22 /* ImageAnnotationClasses.swift */; };
@@ -121,6 +124,9 @@
 /* Begin PBXFileReference section */
 		133E3EC21E885ABE00755FD7 /* FinalProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinalProject.entitlements; sourceTree = "<group>"; };
 		133E3EC31E885AD100755FD7 /* FinalProjectWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinalProjectWatch.entitlements; sourceTree = "<group>"; };
+		13810E0A1E8D69230057D902 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		13810E0D1E8D6E720057D902 /* CDMXTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDMXTableViewCell.swift; sourceTree = "<group>"; };
+		138E14F81E8D78B30020B840 /* CDMXTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDMXTableViewController.swift; sourceTree = "<group>"; };
 		13AE6C901E809A2500704A22 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		13AE6C921E80A7B400704A22 /* ShowMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMapViewController.swift; sourceTree = "<group>"; };
 		13AE6C941E80C03500704A22 /* ImageAnnotationClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAnnotationClasses.swift; sourceTree = "<group>"; };
@@ -265,8 +271,9 @@
 			isa = PBXGroup;
 			children = (
 				496BB1681D3F0A4800CAC0DA /* File.swift */,
-				13AE6C901E809A2500704A22 /* TableViewCell.swift */,
 				13AE6C941E80C03500704A22 /* ImageAnnotationClasses.swift */,
+				13AE6C901E809A2500704A22 /* TableViewCell.swift */,
+				13810E0D1E8D6E720057D902 /* CDMXTableViewCell.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -299,6 +306,7 @@
 		49E9BE101D34737500369F4A /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				13810E0A1E8D69230057D902 /* data.json */,
 				13D9C6A01E8ACAE600D04CEB /* AR */,
 				133E3EC21E885ABE00755FD7 /* FinalProject.entitlements */,
 				496BB1671D3F0A0000CAC0DA /* Models */,
@@ -343,6 +351,7 @@
 				493AF7371D3C15B2000EAA7B /* SaveRouteViewController.swift */,
 				49850BEE1D3C5261002A49D7 /* WebViewController.swift */,
 				13AE6C921E80A7B400704A22 /* ShowMapViewController.swift */,
+				138E14F81E8D78B30020B840 /* CDMXTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -559,6 +568,7 @@
 			files = (
 				49E9BE1F1D34737500369F4A /* LaunchScreen.storyboard in Resources */,
 				13D9C6B51E8ACB8700D04CEB /* hdar_close.png in Resources */,
+				13810E0B1E8D69230057D902 /* data.json in Resources */,
 				13D9C6B71E8ACB8700D04CEB /* hdar_close@3x.png in Resources */,
 				49E9BE1C1D34737500369F4A /* Assets.xcassets in Resources */,
 				49E9BE171D34737500369F4A /* Main.storyboard in Resources */,
@@ -622,6 +632,8 @@
 				13AE6C911E809A2500704A22 /* TableViewCell.swift in Sources */,
 				13D9C6AC1E8ACB1A00D04CEB /* ARViewController.swift in Sources */,
 				496BB1691D3F0A4800CAC0DA /* File.swift in Sources */,
+				138E14F91E8D78B30020B840 /* CDMXTableViewController.swift in Sources */,
+				13810E0E1E8D6E720057D902 /* CDMXTableViewCell.swift in Sources */,
 				493AF7381D3C15B2000EAA7B /* SaveRouteViewController.swift in Sources */,
 				13D9C6A81E8ACB1A00D04CEB /* ARAnnotation.swift in Sources */,
 				13AE6C951E80C03500704A22 /* ImageAnnotationClasses.swift in Sources */,

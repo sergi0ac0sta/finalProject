@@ -1,0 +1,22 @@
+[
+  {
+    "nombre": "Evento 1",
+    "descripcion": "descripcion 1",
+    "fecha": "2017/03/10",
+  },
+  {
+    "nombre": "Evento 2",
+    "descripcion": "descripcion 2",
+    "fecha": "2017/03/11",
+  },
+  {
+    "nombre": "Evento 3",
+    "descripcion": "descripcion 3",
+    "fecha": "2017/03/12",
+  },
+  {
+    "nombre": "Evento 4",
+    "descripcion": "descripcion 4",
+    "fecha": "2017/03/13",
+  }
+]
