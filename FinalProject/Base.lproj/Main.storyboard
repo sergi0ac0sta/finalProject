@@ -315,7 +315,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2aI-o1-fHB" id="3Ks-bX-lTv">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSW-7H-Tyj">
@@ -633,16 +633,16 @@
         <scene sceneID="LW0-8w-kgc">
             <objects>
                 <tableViewController id="crc-Uc-Wzu" customClass="CDMXTableViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="4zo-LN-R7M">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="4zo-LN-R7M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cdmx_cell" id="ivl-hD-2ze" customClass="CDMXTableViewCell" customModule="FinalProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ivl-hD-2ze" id="xAt-Ix-ea6">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5O-PO-Xel">
@@ -660,7 +660,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="description" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ux-ur-IlR">
-                                            <rect key="frame" x="8" y="37" width="359" height="43"/>
+                                            <rect key="frame" x="8" y="37" width="359" height="74"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
